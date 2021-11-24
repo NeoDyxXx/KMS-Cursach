@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat" ,serif;
+}
+
+header {
+    position: fixed;
+    z-index: 99999;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.wrapper_header {
+    width: 100%;
+    height: 75px;
+    background: #fff;
+}
+
+.wrapper_header .header_burger {
+    margin: 0 0 0 2%;
+    height: 100%;
+    width: 50px;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    display: none;
+}
+
+.wrapper_header .header_burger span {
+    width: 50px;
+    display: block;
+    height: 7px;
+    background: black;
+    margin: 2.5px 0;
+}
+
+.wrapper_header ul {
+    list-style-type: none;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper_header ul li {
+    padding: 0 25px;
+}
+
+.wrapper_header ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    height: 100%;
+    position: relative;
+    transition: .5s;
+}
+
+.wrapper_header ul li a::after {
+    content: "";
+    width: 0;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    bottom: -5px;
+    left: -5%;
+    transition: .5s;
+}
+
+.wrapper_header ul li:hover a {
+    opacity: .7;
+}
+
+.wrapper_header ul li:hover a::after {
+    width: 110%;
+}
+
+.sliiide_menu {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    z-index: 9999999;
+    width: 300px;
+    height: 100vh;
+    background: #fff;
+    transition: .5s;
+}
+
+.sliiide_menu .sliiide_menu_exit {
+    position: absolute;
+    cursor: pointer;
+    top: 20px;
+    right: 25px;
+    font-size: 50px;
+    transition: .5s;
+}
+
+.sliiide_menu .sliiide_menu_exit:hover {
+    opacity: .7;
+}
+
+.sliiide_menu ul {
+    list-style-type: none;
+    display: flex;
+    margin: 150px 0 0 0;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sliiide_menu ul li {
+    padding: 30px 0;
+}
+
+.sliiide_menu ul li.sliiide_menu_li_del {
+    padding: 0;
+}
+
+.sliiide_menu ul li.sliiide_menu_li_del span{
+    display: block;
+    width: 200px;
+    height: 1px;
+    background: black;
+}
+
+.sliiide_menu ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    height: 100%;
+    position: relative;
+    transition: .5s;
+}
+
+.sliiide_menu ul li a:hover{
+    opacity: .7;
+}
+
+main.main {
+    position: relative;
+    height: 100vh;
+}
+
+main.main .main_image {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+main.main .main_image img {
+    width: 40%;
+    padding: 0 0 0 5%;
+}
+
+main.main .wrapper_main {
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    z-index: 999;
+}
+
+main.main .main_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    width: 50%;
+    margin: 0 5% 0 0;
+}
+
+main.main .main_text h1{
+    text-align: right;
+    font-size: 36px;
+}
+
+main.main .main_text p {
+    font-size: 22px;
+    text-align: right;
+}
+
+main.main .main_text p .black {
+    font-weight: 900;
+}
+
+main.theory {
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 175px;
+}
+
+main.theory .wrapper_main p{
+    font-size: 24px;
+}
+
+main.theory .wrapper_main p .text_modal {
+    position: relative;
+    font-weight: 800;
+}
+
+main.theory .wrapper_main p .text_modal span.text_modal_span{
+    position: absolute;
+    z-index: 99999;
+    font-weight: 200;
+    top: 30px;
+    left: 0;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+    width: 300px;
+    background: #fff;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+}
+
+main.theory .wrapper_main p .text_modal:hover span.text_modal_span{
+    display: flex;
+}
+
+main.theory .wrapper_main p .text_modal span.text_modal_span img{
+    width: 300px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+main.theory .wrapper_main p .text_modal span.text_modal_span span{
+    padding-top: 15px;
+    font-size: 16px;
+    color: #000;
+    font-weight: 300;
+}
+
+main.theory .wrapper_main h2{
+    font-size: 32px;
+}
+
+main.theory .theory_formule {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 0 100px;
+}
+
+main.theory .theory_formule img{
+    transition: .5s;
+}
+
+main.theory .theory_formule img:hover{
+    transform: scale(1.5);
+}
+
+main.theory .theory_formule p{
+    font-size: 20px;
+    margin: 0 0 0 100px;
+}
+
+main.theory .theory_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+}
+
+main.theory .theory_img .img img{
+    height: 300px;
+}
+
+main .wrapper_main .wrapper_image {
+    margin-bottom: 50px;
+}
+
+main .wrapper_main .wrapper_image:nth-child(2n) {
+    display: flex;
+    justify-content: flex-end;
+}
+
+main .wrapper_main .wrapper_image:nth-child(2n + 1) {
+    display: flex;
+    justify-content: flex-start;
+}
+
+main .wrapper_main .wrapper_image img {
+    width: calc(70vw) !important;
+}
+
+main .wrapper_main .structure_list ul{
+    margin: 0 0 50px 25px;
+    padding: 0;
+}
+
+main .wrapper_main .structure_list li{
+    list-style: decimal;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+}
+
+#dom_overlay_container {
+    width: 80vw !important;
+}
+
+main .wrapper_main .canvas_sturcture #animation_container {
+    width: 80vw !important;
+    height: calc(80vw / 1.333) !important;
+}
+
+main .wrapper_main .canvas_sturcture canvas {
+    width: 80vw !important;
+    height: calc(80vw / 1.333) !important;
+}
+
+main .wrapper_main .canvas_sturcture1 {
+    margin: 50px 0 0 0;
+}
+
+main .wrapper_main .canvas_sturcture1 iframe {
+    width: 80vw;
+    height: calc(80vw / 1.9) !important;
+}
+
+main.about {
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+main.about .wrapper_main {
+    display: flex;
+}
+
+main.about .whoiam img{
+    height: 65vh;
+}
+
+main.about .text {
+    margin-left: 150px;
+    font-size: 32px;
+}
+
+footer.main_footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 75px;
+    width: 100%;
+    box-shadow: -1px -2px 5px rgba(0, 0, 0, 0.4);
+}
+
+footer.main_footer .wrapper_footer {
+    height: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+}
+
+footer.main_footer .wrapper_footer .footer_text{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+    padding: 0 0 0 10%;
+    font-size: 20px;
+}
+
+footer.theory_footer {
+    margin-top: 100px;
+    height: 75px;
+    width: 100%;
+    box-shadow: -1px -2px 5px rgba(0, 0, 0, 0.4);
+}
+
+footer.theory_footer .wrapper_footer {
+    height: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+}
+
+footer.theory_footer .wrapper_footer .footer_text{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+    padding: 0 0 0 10%;
+    font-size: 20px;
+}
+
+.myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999999;
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+.modal_caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, .modal_caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px){
+    .wrapper_header ul {
+        display: none;
+    }
+
+    .wrapper_header .header_burger {
+        display: flex;
+    }
+
+    main.about .wrapper_main {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    main.about .text {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    main.main .main_text {
+        width: 55%;
+        margin: 0 2% 0 0;
+    }
+
+    main.main .main_image {
+        opacity: .6;
+    }
+
+    main.main .main_image img {
+        width: 55%;
+        padding: 0 0 0 2%;
+    }
+
+    main.main .main_text h1{
+        text-align: right;
+        font-size: 32px;
+    }
+    
+    main.main .main_text p {
+        font-size: 18px;
+        text-align: right;
+    }
+
+    main.theory .theory_img {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+
+    main.theory .wrapper_main p .text_modal span.text_modal_span{
+        width: 250px;
+    }
+
+    main.theory .wrapper_main p .text_modal span.text_modal_span img{
+        width: 250px;
+    }
+
+    footer.main_footer .wrapper_footer .footer_text{
+        font-size: 15px;
+    }
+
+    footer.theory_footer .wrapper_footer .footer_text{
+        font-size: 15px;
+    }
+
+    main.about .whoiam img{
+        width: 70vw;
+        height: auto;
+    }
+}
+
+@media all and (max-width: 650px)
+{
+    main.main .main_text {
+        width: 70%;
+    }
+
+    main.main .main_image img {
+        width: 60%;
+        opacity: .7;
+    }
+}
